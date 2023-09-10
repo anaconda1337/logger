@@ -24,12 +24,11 @@ import "github.com/anaconda1337/logger"
 _Initialize Logger_
     
 ```go
-l, err := InitialiseLogger("")
+l, err := logger.InitialiseLogger("config.yaml")
 if err != nil {
-    log.Fatalf("Error creating logger: %v", err)
+  log.Fatalf("Error creating logger: %v", err)
 }
 defer l.Close()
-
 ```
 
 _Log Messages_
