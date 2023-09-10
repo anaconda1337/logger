@@ -16,7 +16,7 @@ Configurable log levels: INFO, WARNING, ERROR, DANGER, and DEFAULT.
 _To use the Logger Module in your Go project, simply import it:_
 
 ```go
-import "github.com/anaconda1337/go-logger"
+import "github.com/anaconda1337/logger"
 ```
 
 - Usage
@@ -24,21 +24,21 @@ import "github.com/anaconda1337/go-logger"
 _Initialize Logger_
     
 ```go
-logger, err := InitialiseLogger("config.yaml")
+l, err := InitialiseLogger("")
 if err != nil {
     log.Fatalf("Error creating logger: %v", err)
 }
-defer logger.Close()
+defer l.Close()
 
 ```
 
 _Log Messages_
 
 ```go
-logger.log(LogLevelInfo, "This is an informational message")
-logger.log(LogLevelWarning, "This is a warning message")
-logger.log(LogLevelError, "This is an error message")
-logger.log(LogLevelDanger, "This is a danger message")
+l.LogMessage(logger.LogLevelInfo, "This is an informational message")
+l.LogMessage(logger.LogLevelWarning, "This is a warning message")
+l.LogMessage(logger.LogLevelError, "This is an error message")
+l.LogMessage(logger.LogLevelDanger, "This is a danger message")
 ```
 
 ### Configuration
