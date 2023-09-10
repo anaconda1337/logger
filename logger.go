@@ -51,7 +51,7 @@ type Logger struct {
 	logFileName string
 }
 
-func InitialiseLogger(configFile string) (*Logger, error) {
+func InitializeLogger(configFile string) (*Logger, error) {
 	if configFile == "" {
 		// default config file
 		configFile = "config.yaml"

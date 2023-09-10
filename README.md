@@ -24,7 +24,7 @@ import "github.com/anaconda1337/logger"
 _Initialize Logger_
     
 ```go
-l, err := logger.InitialiseLogger("config.yaml")
+l, err := logger.InitializeLogger("config.yaml")
 if err != nil {
   log.Fatalf("Error creating logger: %v", err)
 }
@@ -57,12 +57,12 @@ log_colors:
   danger_color: "magenta"
   default_color: "cyan"
 ```
-_You can have multiple configuration files and pass the file name as a parameter to the InitialiseLogger function._
+_You can have multiple configuration files and pass the file name as a parameter to the `InitializeLogger` function._
 
 Note: The config file must be in the `/config` directory.
 
 ```go
-InitialiseLogger("{config_file.yaml}")
+InitializeLogger("{config_file.yaml}")
 ```
 
 ### License
